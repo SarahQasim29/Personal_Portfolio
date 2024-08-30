@@ -1,0 +1,193 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.project-showcase__container {
+  text-align: center;
+  padding: 2rem;
+  color: #00ff7f;
+  font-size: 2rem;
+  margin-top: -1.5rem;
+}
+
+.project-showcase__title--animate {
+  font-size: 5rem;
+  color: #00ff7f;
+  transition: font-size 0.3s ease;
+}
+
+.project-showcase__title--animate-hover {
+  font-size: 3.2rem;
+  color: #00ff7f;
+}
+
+.project-showcase__slider {
+  position: relative;
+  margin-top: 2rem;
+
+  .slick-slide {
+    padding: 0 1rem;
+  }
+}
+
+.project-showcase__card {
+  background: linear-gradient(145deg, #343434, #2c2c2c); // Subtle gradient for a modern effect
+  border: none; // Remove the border for a cleaner look
+  padding: 2rem;
+  margin: 0 1rem;
+  width: 100%;
+  text-align: center;
+  margin-top:-1rem;
+  border-radius: 20px; // Increase border-radius for a smoother look
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); // Deep shadow for a floating effect
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  height: 400px; // Increased height for more content space
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05) translateY(-10px); // Hover effect for elevation
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6); // Enhanced shadow on hover
+    background: linear-gradient(145deg, #3e3e3e, #2c2c2c); // Change background gradient on hover
+  }
+
+  .project-showcase__image {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+    object-fit:cover;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); // Add subtle shadow for depth
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  
+    &:hover {
+      transform: scale(1.0) rotate(2deg); // Adds zoom and slight rotation on hover
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); // Enhanced shadow on hover
+  
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3); // Dark overlay effect on hover
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+  
+      &::before {
+        opacity: 1;
+      }
+    }
+    
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 4px;
+      background-color: #00ff7f;
+      transition: width 0.5s ease;
+    }
+  
+    &:hover::before {
+      width: 80%;
+    }
+  }
+  
+
+  .project-showcase__title {
+    font-family: 'Poppins', sans-serif; // Modern, clean font
+    font-size: 2.2rem;
+    color: #00ff7f; // Neon green for pop
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #ff4500; // Gold color on hover for more emphasis
+    }
+  }
+
+  .project-showcase__description {
+    font-family: 'Roboto', sans-serif; // A versatile, modern font
+    font-size: 14px;
+    color: #e0e0e0; // Light gray for readability
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+  }
+
+  .project-showcase__languages {
+    font-family: 'Fira Code', monospace; // Monospace font for techy feel
+    font-size: 13px;
+    color: #a0a0a0; // Slightly lighter gray for differentiation
+    margin-bottom: 1rem;
+  }
+}
+
+.project-showcase__link {
+  text-decoration: none;
+}
+
+.project-showcase__button {
+  color: white;
+  font-size: 13px; // Slightly larger font for better emphasis
+  letter-spacing: 2px; // Reduce letter spacing for a sleeker appearance
+  padding: 10px 16px; // Increased padding for a more balanced look
+  border: none; // Remove border for a cleaner aesthetic
+  border-radius: 30px; // More rounded for a modern look
+  background: linear-gradient(135deg, #00ff7f, #ff6347); // Gradient for dynamic effect
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1px; // Increased margin for spacing
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); // Soft shadow for depth
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff4500, #00cc66); // Gradient changes on hover
+    color: #fff; // White text on hover for contrast
+    transform: translateY(-3px); // Lift effect on hover
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); // Enhance shadow on hover
+  }
+}
+
+.slick-prev,
+.slick-next {
+  font-size: 2rem; /* Larger arrows */
+  color: #cddbd4;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  &::before {
+    font-family: 'slick';
+    color: #00ff7f;
+  }
+}
+
+.slick-prev {
+  left: 40px;
+  display: block; /* Ensure both arrows are visible */
+}
+
+.slick-next {
+  right: 12px;
+  display: block;
+}
+
+.slick-next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.slick-prev:hover {
+  background: rgba(0, 0, 0, 0.7);
+}

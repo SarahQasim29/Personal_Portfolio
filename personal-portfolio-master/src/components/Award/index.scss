@@ -1,0 +1,111 @@
+.certifications-page {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem; /* Reduced padding */
+    max-width: 1250px; /* Maximum width for larger screens */
+    width: 100%; /* Full width on smaller screens */
+    margin: 0 auto; /* Center container */
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .certifications-page__text-zone {
+    text-align: center;
+  }
+  
+  .certifications-page__title {
+    font-size: 42px; /* Adjust size as needed */
+    color: #00ff7f;
+    transition: font-size 0.3s ease;
+    margin-top: 4px;
+  }
+  
+  .certifications-page__title--hover {
+    font-size: 3.2rem; /* Slightly larger size on hover */
+    color: #00ff7f;
+  }
+  
+  .certifications-page__paragraph {
+    font-size: 17px; /* Increased size of paragraph */
+    line-height: 1.2;
+    color: white;
+    margin-top: -20px;
+  }
+  
+  .certifications-page__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+    margin: 2rem;
+  }
+  
+  .certifications-page__item {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 260px;
+    margin-top: 0.5rem;
+    text-align: center;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    color: #fff;
+  
+    &__image {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    &__title {
+      font-family: 'Poppins', sans-serif; // Modern, clean font
+    font-size: 2.2rem;
+    color: #00ff7f; // Neon green for pop
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: #ff4500; // Gold color on hover for more emphasis
+    }
+    }
+  
+    &__description {
+      font-size: 1.8rem;
+      color: white;
+    }
+  
+    &__date {
+      font-size: 1.4rem;
+      color: #999;
+    }
+  
+    &:hover {
+      transform: translateY(-10px) scale(1.08);
+      box-shadow: 0 0 30px rgba(255, 255, 0, 0.6);
+  
+      &__image {
+        transform: scale(1.1);
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .certifications-page {
+      padding: 1rem; /* Reduced padding for smaller screens */
+      max-width: 100%; /* Full width for small screens */
+    }
+  
+    .certifications-page__text-zone {
+      width: 100%;
+      max-width: none; /* Remove maximum width for small screens */
+    }
+  }
+  
